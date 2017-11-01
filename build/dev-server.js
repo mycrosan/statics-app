@@ -53,7 +53,7 @@ Object.keys(proxyTable).forEach(function (context) {
   app.use(proxyMiddleware(options.filter || context, options))
 })
 
-
+queryStat.migration(null);
 app.use('/statics/query', function (req, res) {
     queryStat.query(req, res);
 });

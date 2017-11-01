@@ -13,7 +13,7 @@ module.exports = function () {
           connector: 'mysql',
           host : 'localhost',
           user : 'root',
-          password : 'zeca',
+          password : 'root',
           database : 'production_api'
         }
       }
@@ -44,7 +44,7 @@ module.exports = function () {
           connector: 'mysql',
           host : 'localhost',
           user : 'root',
-          password : 'zeca',
+          password : 'root',
           database : 'production_api'
         }
       }
@@ -154,7 +154,8 @@ module.exports = function () {
             queryCol.whereRaw(row.model+'.'+row.field+' '+row.op+' ?', row.value);
           });
         }
-        queryCol.orderByRaw(orgColName+' ASC')
+        console.log(queryCol.select().toSQL())
+        queryCol.orderByRaw('date ASC')
         queryCol.select()
           .then(function(rows) {
             if(req.query.filter.cols[0].limit){
@@ -187,6 +188,7 @@ module.exports = function () {
             if(orderBy.length){
               query.orderByRaw(orderBy.join(', '));
             }
+            console.log(query.select().toSQL());
             query.select().then(function(projectNames) {
               var result = {};
               result.header = header;

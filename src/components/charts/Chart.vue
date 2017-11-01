@@ -65,7 +65,7 @@ export default{
       var dataCategories = JSON.parse(JSON.stringify(this.dataLoad.categories))
       var options = Object.assign({}, JSON.parse(JSON.stringify(this._data.options)),
         {series: dataParse},
-        {xAxis: {categories: dataCategories, labels: {rotation: -90}}})
+        {xAxis: {categories: dataCategories, labels: {rotation: -45}}})
       this.target = Highcharts.chart(this.$el, options)
       this.target.addSeries(this.dataLoad.avgSerie)
     },
