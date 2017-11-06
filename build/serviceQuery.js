@@ -13,7 +13,7 @@ module.exports = function () {
           connector: 'mysql',
           host : 'localhost',
           user : 'root',
-          password : 'zeca',
+          password : 'password',
           database : 'production_api'
         }
       }
@@ -44,7 +44,7 @@ module.exports = function () {
           connector: 'mysql',
           host : 'localhost',
           user : 'root',
-          password : 'zeca',
+          password : 'password',
           database : 'production_api'
         }
       }

@@ -6,7 +6,7 @@ module.exports = {
     connection: {
       database: 'production_api',
       user:     'root',
-      password: 'zeca',
+      password: 'password',
       host: 'localhost',
     },
     migrations: {

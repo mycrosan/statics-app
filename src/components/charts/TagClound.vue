@@ -23,7 +23,7 @@ export default{
   },
   data () {
     return {
-      dataTag: this.dataLoad,
+      dataTag: [],
       options: {
         chart: {
           type: 'wordcloud'

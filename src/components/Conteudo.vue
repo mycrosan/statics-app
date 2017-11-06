@@ -83,6 +83,9 @@
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         <h3>Acessos por Tag dos objetos</h3>
         <tag-cloud :dataLoad="asyncDataTag"></tag-cloud>
+        <pre>
+      {{ asyncDataTag | json }}
+      </pre>
       </div>
     </div>
   </div>
